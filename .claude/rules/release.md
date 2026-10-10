@@ -34,10 +34,10 @@ grep -Hn "version\|__version__" pyproject.toml src/claude_repath/__init__.py .cl
 
 ## 4. README 校验
 
-- [ ] 所有 `![...](path)` 图片链接必须是 **绝对 URL**：`https://raw.githubusercontent.com/xPeiPeix/claude-repath/main/<file>`
+- [ ] 所有 `![...](path)` 图片链接必须是 **绝对 URL**：`https://raw.githubusercontent.com/peipei-labs/claude-repath/main/<file>`
   - **禁止**相对路径 `./demo.gif` — PyPI 不渲染相对路径，破图（v0.5.0 翻车案例）
 - [ ] badges 链接指向正确的默认分支（`main`，不是 `master`）
-- [ ] Install 章节同时覆盖三条路径：PyPI CLI（uvx/pipx/pip）、Claude Code plugin（`/plugin marketplace add`）、skills.sh 生态（`npx skills add xPeiPeix/claude-repath`）
+- [ ] Install 章节同时覆盖三条路径：PyPI CLI（uvx/pipx/pip）、Claude Code plugin（`/plugin marketplace add`）、skills.sh 生态（`npx skills add peipei-labs/claude-repath`）
 - [ ] **Roadmap 段更新**（极易漏）：
   - [ ] 原来的 `**vA.B.C (current)**` 去掉 `(current)` 标签
   - [ ] 在顶部插入 `**vX.Y.Z (current)**` 新条目，技术性段落描述核心变更（风格参考旧条目）
@@ -68,10 +68,10 @@ gh release create vX.Y.Z \
 
 ## 6. 发布后验证
 
-- [ ] GitHub Actions publish.yml 绿灯：<https://github.com/xPeiPeix/claude-repath/actions/workflows/publish.yml>
+- [ ] GitHub Actions publish.yml 绿灯：<https://github.com/peipei-labs/claude-repath/actions/workflows/publish.yml>
 - [ ] PyPI 页面 demo.gif 正常显示、版本号更新：<https://pypi.org/project/claude-repath/>
 - [ ] `uvx --from claude-repath@X.Y.Z claude-repath --version` 拉到新版号
-- [ ] `npx skills add xPeiPeix/claude-repath -y` 能识别 `skills/claude-repath/SKILL.md` 并完成安装（贡献 skills.sh install 计数）
+- [ ] `npx skills add peipei-labs/claude-repath -y` 能识别 `skills/claude-repath/SKILL.md` 并完成安装（贡献 skills.sh install 计数）
 
 ## 踩过的坑
 

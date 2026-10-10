@@ -2,12 +2,12 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/claude-repath.svg)](https://pypi.org/project/claude-repath/)
 [![Python versions](https://img.shields.io/pypi/pyversions/claude-repath.svg)](https://pypi.org/project/claude-repath/)
-[![CI](https://github.com/xPeiPeix/claude-repath/actions/workflows/ci.yml/badge.svg)](https://github.com/xPeiPeix/claude-repath/actions/workflows/ci.yml)
+[![CI](https://github.com/peipei-labs/claude-repath/actions/workflows/ci.yml/badge.svg)](https://github.com/peipei-labs/claude-repath/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > Rewire Claude Code's local state when your project folder moves.
 
-![claude-repath wizard demo](https://raw.githubusercontent.com/xPeiPeix/claude-repath/main/demo.gif)
+![claude-repath wizard demo](https://raw.githubusercontent.com/peipei-labs/claude-repath/main/demo.gif)
 
 When you move or rename a project directory, Claude Code loses track of its sessions, memory, todos, and worktrees — because the absolute path is hardcoded in **four** different places. `claude-repath` patches all of them in one shot.
 
@@ -47,14 +47,14 @@ In addition to the CLI, this repo ships a Claude Code plugin so your AI assistan
 From inside Claude Code:
 
 ```text
-/plugin marketplace add xPeiPeix/claude-repath
+/plugin marketplace add peipei-labs/claude-repath
 /plugin install claude-repath@claude-repath-marketplace
 ```
 
 Or, from any terminal (uses the open [skills.sh](https://skills.sh/) ecosystem — Claude Code, Cursor, Codex, and [~40 more agents](https://github.com/vercel-labs/skills#available-agents)):
 
 ```bash
-npx skills add xPeiPeix/claude-repath
+npx skills add peipei-labs/claude-repath
 ```
 
 The plugin only ships a skill (a ~200-line guidance document). It does **not** bundle the CLI — you still install that via `uvx`/`pipx`/`pip` above, or let the skill guide Claude to run it via `uvx` on first use.
@@ -193,7 +193,7 @@ is designed to close their gaps:
 
 ```bash
 # Clone & enter
-git clone https://github.com/xPeiPeix/claude-repath.git
+git clone https://github.com/peipei-labs/claude-repath.git
 cd claude-repath
 
 # Install with uv (creates .venv, installs typer + dev deps)

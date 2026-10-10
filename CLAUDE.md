@@ -14,12 +14,12 @@ the skills.sh open-standard ecosystem.
   4. `.claude-plugin/marketplace.json` → `plugins[0].version`（marketplace 清单）
 
   漏任何一处都会翻车：v0.3.2 → v0.4.0 漏了 plugin.json/marketplace.json；v0.5.1 漏了 `__init__.py` 导致 PyPI 版本号正确但 `claude-repath --version` 输出错版本。验证命令：`grep -rn "version" pyproject.toml src/claude_repath/__init__.py .claude-plugin/`
-- README 所有图片链接必须用 **绝对 URL**（`https://raw.githubusercontent.com/xPeiPeix/claude-repath/main/<file>`）。**禁止**相对路径——PyPI 不渲染相对路径，破图（v0.5.0 踩过）
+- README 所有图片链接必须用 **绝对 URL**（`https://raw.githubusercontent.com/peipei-labs/claude-repath/main/<file>`）。**禁止**相对路径——PyPI 不渲染相对路径，破图（v0.5.0 踩过）
 
 ## 关键路径
 
 - CLI 入口：`src/claude_repath/cli.py`（typer app）
-- Skill 定义：`skills/claude-repath/SKILL.md`（skills.sh 通过 `npx skills add xPeiPeix/claude-repath` 自动发现）
+- Skill 定义：`skills/claude-repath/SKILL.md`（skills.sh 通过 `npx skills add peipei-labs/claude-repath` 自动发现）
 - 发布工作流：`.github/workflows/publish.yml`（监听 `release:published` 事件，非 tag push）
 - 版本号真源：`pyproject.toml` 的 `[project].version`
 
